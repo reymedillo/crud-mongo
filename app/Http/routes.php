@@ -17,4 +17,6 @@ Route::get('/', function () {
 
 Route::get('/map', 'TestController@getIndex');
 
-Route::match(['post'],'/v1/auth/register', array('as'=>'user.regmethod', 'uses'=>'Auth\AuthController@create'));
+Route::auth();
+
+Route::get('/home', 'HomeController@index');
