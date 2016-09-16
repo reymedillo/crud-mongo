@@ -15,8 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/map', 'TestController@getIndex');
+// Route::get('/map', 'TestController@getIndex');
 
 Route::auth();
 
 Route::get('/home', 'HomeController@index');
+
+Route::get('/employee', 'TestController@getIndex');
