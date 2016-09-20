@@ -15,10 +15,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/employee', 'TestController@getIndex');
+Route::post('/employee', 'TestController@postIndex');
+Route::post('/employee/{id}', 'TestController@deleteIndex');
+Route::get('/employee/view/{id}', 'TestController@viewIndex');
+Route::post('/employee/view/{id}', 'TestController@postViewIndex');
+
 // Route::get('/map', 'TestController@getIndex');
 
 Route::auth();
 
 Route::get('/home', 'HomeController@index');
-
-Route::get('/employee', 'TestController@getIndex');
